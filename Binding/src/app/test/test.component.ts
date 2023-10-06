@@ -2,18 +2,16 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-test',
-  template: `<div> welcome {{name}}</div>
-<input #myInput type="text"/>
-<button (click)="logMessage(myInput)">log</button>
+  template: `
+  <input [(ngModel)]="name" type="text"/>
+  {{name}}
   `,
   styles: []
 })
 export class TestComponent implements OnInit{
-  public name="vishwas";
+  public name=" ";
   constructor(){}
-logMessage(value: any){
-console.log(value)
-}
+
   ngOnInit(){}
 
 }

@@ -4,12 +4,18 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-test',
   template: `<div> welcome {{name}}</div>
    <h2>{{2+2}}</h2>
-  <h2>{{"goodbye"+name}}</h2>`,
+  <h2>{{"goodbye"+name}}</h2>
+  <h2>{{name.length}}</h2>
+  <h2>{{name.toUpperCase()}}</h2>
+  <h2>{{greetMessage()}}`,
   styles: []
 })
 export class TestComponent implements OnInit{
   public name="vishwas"
   constructor(){}
+  greetMessage(){
+return "Hello"+this.name;
+  }
   ngOnInit(){}
 
 }

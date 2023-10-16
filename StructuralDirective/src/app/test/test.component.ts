@@ -3,16 +3,19 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-test',
   template: `
- <div [ngSwitch]="color">
-  <div *ngSwitchCase=" 'red' ">yes it is red</div>
-  <div *ngSwitchCase=" 'green' ">yes it is green</div>
-  <div *ngSwitchCase=" 'blue' ">yes it is blue</div>
-  <div *ngSwitchDefault>try again</div>
- </div>
+ <h2 *ngIf="displayName;  then thenBlock; else elseBlock">
+ </h2>
+ <ng-template #thenBlock>
+  <h1>kala</h1>
+ </ng-template>
+
+ <ng-template #elseBlock>
+  <h1>chandrakala</h1>
+ </ng-template>
 
   `,
   styleUrls: ['./test.component.css']
 })
 export class TestComponent {
-public color="red";
+public displayName=true;
 }

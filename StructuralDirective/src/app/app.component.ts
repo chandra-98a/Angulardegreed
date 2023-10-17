@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Structural Directives';
-  public color="orange";
+  public name="vishwas";
 }

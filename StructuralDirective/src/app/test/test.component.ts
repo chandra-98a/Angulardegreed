@@ -1,21 +1,16 @@
-import { Component } from '@angular/core';
+import { Component , OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-test',
-  template: `
- <h2 *ngIf="displayName;  then thenBlock; else elseBlock">
- </h2>
- <ng-template #thenBlock>
-  <h1>kala</h1>
- </ng-template>
-
- <ng-template #elseBlock>
-  <h1>chandrakala</h1>
- </ng-template>
-
-  `,
+  template:`
+  <h2> {{"hello "+ name}}</h2>` ,
   styleUrls: ['./test.component.css']
 })
-export class TestComponent {
-public displayName=true;
+export class TestComponent implements OnInit{
+ngOnInit(){
+
+}
+@Input('parentData') public name: any;
+
+
 }

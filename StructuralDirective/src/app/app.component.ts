@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Structural Directives';
   public name="vishwas";
+  public message=" ";
 }
